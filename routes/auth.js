@@ -8,7 +8,7 @@ const {greetings,overview}=require("../controllers/auth")
 
 // Routes
 
-router.get("/",greetings);
+router.get("/",isAuth,isAdmin,greetings);
 router.get("/overview",overview)
 
 
